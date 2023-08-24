@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula05</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 05</h1>
+    <p>Bem vindo a aula 05!</p>
+    <p>Aprendendo a usar DOM em javascript</p>
+    <a id="link" href="https://www.youtube.com/watch?v=WWZX8RWLxIk">Clique em mim</a><br><br>
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[0] // esta variável recebe o primeiro elemento <p>
+        var p2 = document.getElementsByTagName('p')[1] // esta variável recebe o segundo elemento <p>
+        // quando pegamos um elemento do documento pela tag, podemos especificá-lo pela ordem que foi utilizado
+        
+        var video = document.getElementById('link') //aqui pegamos o elemento pelo id 'link'
+        
+        document.write(`No primeiro parágrado está escrito: ${p1.innerText}<br>`)
+        document.write(`No segundo parágrado está escrito: ${p2.innerText}`)
+
+        corpo.style.background = 'darkslateblue'
+        p1.style.color = 'yellow' 
+        // podemos alterar as propriedades do elemento (como cor) por meio da variável a que ele foi atribuído
+        
+        video.innerText = 'Introdução ao DOM - Curso JavaScript #09' // mudando o texto do "link"
+        video.style.color = '#1E90FF' // mudando a cor do "link"
+        
+        /* 
+        IMPORTANTE!
+
+        No DOM você utiliza sempre o "document." seguido do elemnto HTML desejado
+
+        "innerText" é uma propriedade que se refere ao texto dentro daquele elemento (inner = interno)
+        
+        Não é obrigatório atribuir uma variável a um elemento. Podemos utilizar o seguinte código:
+        document.getElementById('link').innerText = 'Introdução ao DOM - Curso JavaScript #09'
+
+        Para mudar o background do body sem variável:
+        document.body.style.background = '#1C1C1C'
+        
+        Usando name:
+        HTML = <a name="link">Clique aqui</a>
+        JS = document.getElementsByName('link')[0].innerText = 'Introdução ao DOM - Curso JavaScript #09'
+
+        Usando class:
+        HTML = <a class="link">Clique aqui</a>
+        JS = document.getElementsByClassName('link')[0].innerText = 'Introdução ao DOM - Curso JavaScript #09'  
+        
+        Na maioria dos casos será necessário especificar o vetor do elemento "[]" já que o mesmo "name" 
+        e "class" geralmente são utilizados em vários elementos
+
+        ====================================================================================================
+
+        querySelector
+
+        Usando id:
+        HTML = <a id="link">Clique aqui</a>
+        JS = document.querySelector('a#link').innerText = 'Introdução ao DOM - Curso JavaScript #09'
+
+        Usando class:
+        HTML = <a class="link">Clique aqui</a>
+        JS = document.querySelector('a.link').innerText = 'Introdução ao DOM - Curso JavaScript #09'
+        
+        Remover text-decoration de um elemento:
+        document.querySelector('a').style.textDecoration = 'none'
+
+        Esconder um elemento:
+        document.querySelector('a').style.visibility = 'hidden'
+        
+        Como reescrever o texto do elemento com toda sua formatação (caso esteja em negrito, por exemplo):
+        document.write(p1.innerHTML)
+        
+        Como reescrever o texto do elemento dentro de um alert:
+        alert(p1.innerHTML) 
+        */
+    </script>
+</body>
+</html>

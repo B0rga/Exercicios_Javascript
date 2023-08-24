@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 07</h1>
+    <p>Soma de valores</p>
+    <input type="number" name="texto1" id="texto1"> +
+    <input type="number" name="texto2" id="texto2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="result"></p>
+    <script>
+        function somar(){
+            var text1 = document.querySelector('input#texto1')
+            var text2 = document.querySelector('input#texto2')
+            var res = document.querySelector('p#result')
+            
+            /* É necessário converter os valores para number,
+            pois qualquer caixa de texto interpreta o que foi inserido como string */
+            var val1 = Number(text1.value)
+            var val2 = Number(text2.value)
+            var soma = val1 + val2 
+
+            res.innerText = ` ${val1} + ${val2} = ${soma}`
+            res.style.color = 'lime'
+        }
+    </script>
+</body>
+</html>

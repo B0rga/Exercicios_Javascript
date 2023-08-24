@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 14</h1>
+    <p>Sua Nacionalidade</p>
+    <input name="textpais" id="textpais" placeholder="País de origem">
+    <input type="button" id="btn" value="Verificar" onclick="verificar()" onmouseenter="entrar()" onmouseout="sair()">
+    <p id="res"></p>
+    <script>
+        var btn = document.querySelector('input#btn')
+        function verificar(){
+            var pais = document.querySelector('input#textpais').value
+            var res = document.querySelector('p#res')
+            if(pais == 'Brasil' || pais == 'brasil'){
+                res.innerText = 'Você é brasileiro.'
+            }else{
+                res.innerText = 'Você é estrangeiro.'
+            }
+        }
+        function entrar(){
+            btn.style.color = '#1C1C1C'
+            btn.style.background = 'lavender'
+        }
+        function sair(){
+            btn.style.color = 'lavender'
+            btn.style.background = '#1C1C1C'
+        }
+    </script>
+</body>
+</html>

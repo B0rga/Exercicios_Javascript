@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 13</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 13</h1>
+    <p>Saiba se você foi multado</p>
+    <input type="number" name="velocidade" id="velocidade" placeholder="Km/h"> 
+    <input type="button" value="Verificar" onclick="verificar()" onmouseenter="entrar()" onmouseout="sair()" id="button">
+    <p id="result"></p>
+    <script>
+        var btn = document.querySelector('input#button')
+        
+        function verificar(){
+            var vel = Number(document.querySelector('input#velocidade').value) // "value" DEVE ser utilizado para conversão para Number
+            var res = document.querySelector('p#result')
+            if(vel > 60){
+                res.innerText = `Multado por exceder o limite de velocidade.\nLimite: 60km/h; sua velocidade: ${vel}km/h.`
+                res.style.color = 'red'
+            }else{
+                res.innerText = `Limite de velocidade respeitado. \nLimite: 60km/h; sua velocidade: ${vel}km/h.`
+                res.style.color = 'lime'
+            }   
+        }
+        function entrar(){
+            btn.style.color = '#1C1C1C'
+            btn.style.background = 'lavender'
+        }
+        function sair(){
+            btn.style.color = 'lavender'
+            btn.style.background = '#1C1C1C'
+        }
+    </script>
+</body>
+</html>

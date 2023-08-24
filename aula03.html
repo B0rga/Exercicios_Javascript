@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula03</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 03</h1>
+    <p>Bem vindo ao meu terceiro script!</p>
+    <script>
+        var n1 = Number.parseInt(window.prompt('Digite o valor n1:')) 
+        var n2 = Number.parseInt(window.prompt('Digite o valor n2:'))
+        /*como o window.prompt apenas retorna valores do tipo string, 
+        temos que converter o valor desejado a partir do Number.ParseInt*/
+        //Number.parseInt(n) = Inteiro
+        //Number.parseFloat(n) = Real
+        //Number(n) = Forma mais simplificada; o próprio javascript irá definir o tipo de acordo com o valor digitado 
+        var result = n1 + n2
+        window.alert(n1 +' + '+ n2 +' = '+ result)
+        
+        var n3 = Number(prompt('Digite o valor n3'))
+        var n4 = Number(prompt('Digite o valor n4'))
+        var result = n3 * n4 // aqui o valor da variável result será substituído
+        alert(`${n3} x ${n4} = ${result}`) // Template String
+    </script>
+</body>
+</html>

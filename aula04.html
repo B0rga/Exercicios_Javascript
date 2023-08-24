@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula04</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 04</h1>
+    <script>
+        var nome = prompt('Digite seu nome:')
+        var valor = Number(prompt('Digite um número com várias casas decimais:'))
+        var salario = Number(prompt('Digite seu salário:'))
+        
+        document.write(`Seu nome é <strong>${nome}</strong>.<br>`)
+        document.write(`O nome ${nome} tem ${nome.length} letras.<br>`)
+        document.write(`Em maiúsculo seu nome ficaria ${nome.toUpperCase()}.<br><br>`)
+
+        document.write(`O valor ajustado é ${valor.toFixed(2)}<br>`)
+        document.write(`O seu salário é ${salario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

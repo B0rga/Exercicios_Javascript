@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 06</h1>
+    <p>Eventos DOM</p>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja</div>
+    <script>
+        // var a = document.getElementById('area')
+
+        /* Por meio dos Listeners não há a necessidade de especificar as funções dentro do HTML,
+        pois eles são capazes de detectar os eventos que ocorreram:
+
+        addEventListener('click', clicar)
+        addEventListener('mouseenter', entrar)
+        addEventListener('mouseout', entrar)
+        */        
+
+        function clicar(){
+            document.querySelector('div#area').innerText = '(ง‾ʖ̫‾)ง'
+            // area.innerText = '(ง‾ʖ̫‾)ง'
+        }
+        function entrar(){
+            document.querySelector('div#area').style.background = 'red'
+            // area.style.background = 'red'
+        }
+        function sair(){
+            document.querySelector('div#area').style.background = 'green'
+            document.querySelector('div#area').innerText = 'Interaja'
+            // area.style.background = 'green'
+            // area.innerText = 'Interaja'
+        }
+    </script>
+</body>
+</html>
