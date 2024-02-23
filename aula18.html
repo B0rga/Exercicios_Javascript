@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Aula 18</h1>
+    <p>Veridicando se um número é par ou ímpar</p>
+    <input type="number" id="num" placeholder="0">
+    <input type="button" value="Verificar" id="btn" onclick="Verificar()">
+    <p id="res"></p>
+</body>
+<script>
+
+    function Verificar(){
+        var num = parseInt(document.querySelector("#num").value);
+        var res = document.querySelector("#res");
+
+        if(num%2==0){
+            res.innerText = `${num} é par`;
+            res.style.color = 'lightgreen'
+            return ""
+        }
+        else{
+            res.innerText = `${num} é ímpar`;
+            res.style.color = 'lightgreen'
+        }
+    }
+</script>
+</html>
