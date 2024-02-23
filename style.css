@@ -5,8 +5,10 @@ body{
 }
 
 #area{ /* aula06: */
-    background: green;
-    color: white;
+    background: #1C1C1C;
+    border: 1px solid lavender;
+    border-radius: 10px;
+    color: lavender;
     text-align: center;
     width: 200px;
     height: 200px;
@@ -14,11 +16,6 @@ body{
     cursor: pointer;
 }
 
-body{
-    background-color: #1C1C1C;
-    color: lavender;
-    font: normal 16pt 'Roboto Mono', monospace;
-}
 input{
     padding: 8px;
     font: normal 12pt 'Roboto Mono', monospace;
@@ -26,7 +23,7 @@ input{
     border: solid 1px lavender;
     color: lavender;
     border-radius: 4px;
-    width: 130px;
+    width: 150px;
     outline: 0;
 }
 

@@ -10,8 +10,8 @@
 <body>
     <h1>Aula 07</h1>
     <p>Soma de valores</p>
-    <input type="number" name="texto1" id="texto1"> +
-    <input type="number" name="texto2" id="texto2">
+    <input type="number" name="texto1" id="texto1" placeholder="0"> +
+    <input type="number" name="texto2" id="texto2" placeholder="0">
     <input type="button" value="Somar" onclick="somar()">
     <p id="result"></p>
     <script>
@@ -27,7 +27,7 @@
             var soma = val1 + val2 
 
             res.innerText = ` ${val1} + ${val2} = ${soma}`
-            res.style.color = 'lime'
+            res.style.color = 'lightgreen'
         }
     </script>
 </body>
